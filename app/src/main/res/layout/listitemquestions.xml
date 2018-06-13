@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_height="340dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="#fff"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="4dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        app:cardUseCompatPadding="true"
+        android:id="@+id/dsCardView">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/dsQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#73558B2F"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="2dp"
+                    android:textColor="#616161"
+                    android:textSize="20sp"
+                    tools:text="SongName" />
+
+                <TextView
+                    android:id="@+id/dsAnswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="#73558B2F"
+                    android:paddingTop="32dp"
+                    android:gravity="top|center_horizontal"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="4dp"
+                    android:textColor="#616161"
+                    tools:text="Vocalist Name" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
+

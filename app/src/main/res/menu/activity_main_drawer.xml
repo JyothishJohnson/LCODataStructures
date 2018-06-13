@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_website"
+            android:icon="@drawable/ic_web_black_24dp"
+            android:title="Visit Our Website" />
+        <item
+            android:id="@+id/nav_youtube"
+            android:icon="@drawable/ic_youtube"
+            android:title="Visit YouTube Channel" />
+        <item
+            android:id="@+id/nav_rate"
+            android:icon="@drawable/ic_star_border_black_24dp"
+            android:title="Rate Us" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_email"
+                android:icon="@drawable/ic_mail_outline_black_24dp"
+                android:title="Email" />
+        </menu>
+    </item>
+
+</menu>

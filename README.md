@@ -2,7 +2,6 @@
 
 <img src="/20180613_081540.gif">
 
-## This repository was made for the interview process of Learn Code Online!!
 ### It is a simple DataStructures Preparation app with beautiful UI.
 
 ## Check out the Screeenshots below...

@@ -42,6 +42,7 @@ public class DSPrep extends AppCompatActivity implements
     private CardView bannerAd;
 
 
+
     private static final String jsonUrl = "https://learncodeonline.in/api/android/datastructure.json";
 
     @Override
@@ -62,6 +63,7 @@ public class DSPrep extends AppCompatActivity implements
         modelArrayList = new ArrayList<>();
         discreteScrollView.addOnItemChangedListener(this);
 
+        loadData();
         ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
 
@@ -94,6 +96,8 @@ public class DSPrep extends AppCompatActivity implements
                 }
             }
         });
+
+
     }
 
 
@@ -101,6 +105,10 @@ public class DSPrep extends AppCompatActivity implements
         discreteScrollView = findViewById(R.id.recycler_viewDS);
         discreteScrollView.setHasFixedSize(true);
         discreteScrollView.setOrientation(DSVOrientation.VERTICAL);
+    }
+
+    private void loadData(){
+        modelArrayList = new ArrayList<>();
     }
 
 
@@ -127,14 +135,11 @@ public class DSPrep extends AppCompatActivity implements
         if(data!=null && !data.isEmpty()){
             modelArrayList.addAll(data);
 
-
             infiniteScrollAdapter = InfiniteScrollAdapter.wrap(new CategoryDisplayAdapter(modelArrayList));
             discreteScrollView.setAdapter(infiniteScrollAdapter);
             discreteScrollView.setItemTransformer(new ScaleTransformer.Builder()
                     .setMinScale(0.8f)
                     .build());
-
-
         }
         else {
             if(data.isEmpty()){
@@ -151,4 +156,6 @@ public class DSPrep extends AppCompatActivity implements
     public void onLoaderReset(@NonNull Loader<List<Model>> loader) {
         modelArrayList.clear();
     }
+
+
 }

@@ -261,4 +261,15 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    /*@Override
+    protected void onPause() {
+        position=discreteScrollView.getCurrentItem();
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        discreteScrollView.scrollToPosition(position);
+        super.onResume();
+    }*/
 }

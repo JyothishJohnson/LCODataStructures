@@ -22,8 +22,10 @@
         </activity>
         <activity
             android:name=".activities.DSPrep"
+            android:launchMode="singleTop"
             android:parentActivityName=".activities.MainActivity" />
-        <activity android:name=".activities.SplashScreen"
+        <activity
+            android:name=".activities.SplashScreen"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,6 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Demo"></activity>
     </application>
 
 </manifest>

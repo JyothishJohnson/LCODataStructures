@@ -1,9 +1,7 @@
 package com.jyothishjohnson.bottomnavbartest.lcodatastructures.data;
 
-import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -15,10 +13,9 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.jyothishjohnson.bottomnavbartest.lcodatastructures.R;
+import com.jyothishjohnson.bottomnavbartest.lcodatastructures.activities.DSPrep;
 
 import java.util.ArrayList;
-
-import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
@@ -48,7 +45,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.cardViewSingleCourse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent goToMarket = new Intent(Intent.ACTION_VIEW, Uri.parse(mArrayList.get(position).getCourseUrl()));
+                /*Intent goToMarket = new Intent(Intent.ACTION_VIEW, Uri.parse(mArrayList.get(position).getCourseUrl()));
                 // To count with Play market backstack, After pressing back button,
                 // to taken back to our application, we need to add following flags to intent.
                 goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
@@ -59,7 +56,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                 } catch (ActivityNotFoundException e) {
                     context.startActivity(new Intent(Intent.ACTION_VIEW,
                             Uri.parse(mArrayList.get(position).getCourseUrl())));
-                }
+                }*/
+
+                Intent i = new Intent(view.getContext(), DSPrep.class);
+                view.getContext().startActivity(i);
             }
         });
 
